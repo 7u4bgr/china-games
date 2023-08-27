@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .boxs {
+        width: 450px;
+        display: inline-block;
+        background-color: black;
+    }
+
+    .button1 {
+        width: 450px;
+        height: 150px;
+        border: 0.5px solid gray;
+        background-color: black;
+    }
+</style>
+
+<body>
+    <script>
+        let users = [
+
+        ]
+        let a = 1
+
+        for (let y = 0; y < 2; y++) {
+            for (let x = 1; x < 7; x++) {
+                let div = document.createElement("div")
+                div.classList.add("boxs")
+                let button = document.createElement("button")
+                button.classList.add("button1")
+                // let first=()=>console.log(first);
+                // let second=()=>console.log(second);
+                let first;
+                let second;
+                let p = document.createElement("p")
+                p.innerHTML = [x]
+                a++;
+                button.appendChild(p)
+                div.appendChild(button)
+                document.body.appendChild(div)
+                button.addEventListener("click",(event)=>{
+                    button.style.backgroundColor="white"
+                    if ([x]==[y]) {
+                        console.log("True");
+                    }
+                    else{
+                        console.log("False");
+                    }
+                })
+                button.addEventListener("dblclick", (event) => {
+                    // first=()=>{
+                    //     first.style.backgroundColor = "white"
+                    // };
+                    // second=()=>{
+                    //     second.style.backgroundColor = "red"
+                    // };
+                        button.style.backgroundColor="black"
+                        
+                })
+                
+
+
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
